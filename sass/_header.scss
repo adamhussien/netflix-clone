@@ -1,0 +1,210 @@
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/header-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    grid-area: header;
+    height: 100vh;
+    margin-bottom: 2rem;
+     }
+    .navbar {
+        background-color: black;
+    
+        &__menu {
+            height: 0;
+            overflow: hidden;
+            transition: 0.6s;
+           
+    
+            &-link {
+                text-decoration: none;
+                color: var(--color-primary);
+                font-size: 1.4rem;
+                text-transform: capitalize;
+                font-weight: 800;
+    
+                &:hover {
+                    color: #C51605;
+                }
+            }
+    
+            &-btn {
+                background-color: #C51605;
+                padding: 1.2rem 1.3rem;
+                text-align: center;
+                border: none;
+                outline: none;
+                margin: 1rem;
+                border-radius: 4px;
+                transition: all 0.5s;
+                text-transform: capitalize;
+    
+                &:hover {
+                    background-color: var(--color-primary);
+                    transform: scale(1.2);
+                }
+            }
+    
+            &.show {
+                height: 10rem;
+            }
+        }
+    
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+    
+            &-logo {
+                max-width: 3.4rem;
+            }
+    
+            &-ham {
+                @media screen and (min-width: 50em) {
+                    display: none;
+                }
+                cursor: pointer;
+    
+                &-line {
+                    width: 3rem;
+                    height: 3px;
+                    margin: .5rem;
+                    display: block;
+                    background-color: red;
+                
+                }
+            }
+        }
+    }
+    
+
+
+@media screen and (min-width: 50em) {
+
+    .navbar {
+        max-width: 120rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+
+        &__menu {
+        height: auto;
+          display: flex;
+            &-item {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+}
+
+.hero{
+  position: absolute;
+  margin-top: 7rem;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+          &__details{
+                &-title{
+               color: #fff;
+              font-size: clamp(2rem, 5vw, 3rem);
+              text-transform: capitalize;
+              font-weight: 800;
+              opacity: 0;
+              transition: 0.5s ease-in-out;
+              animation: left 1s ease-in-out forwards;
+              @keyframes left {
+                0%{
+                    opacity: 0;
+                    transform: translatex(-50px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+              }
+                }
+
+                &-sub{
+                    color: #fff;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    font-size: clamp(1.3rem, 2.5vw,1.5rem);
+                animation: 1s right ease-in forwards;
+                opacity: 0;
+                @keyframes right {
+                    0%{
+                     transform: translateX(560px);
+                    }
+                       100%{
+                 
+                         opacity: 1;
+                         transform: translateX(0);
+                       }
+                     }
+                }
+              
+            }
+        &__form{
+            &-title{
+            font-size: clamp(1.1rem, 1.9vw, 1.3rem);
+            color: #fff;
+            font-weight: 500;
+          
+            }
+            &-input{
+        border: none;
+        outline: none;
+        padding: .9rem;
+        font-size: 1rem;
+        border-radius: 3px;
+        margin: .5rem;
+        &:focus{
+            background-color: #44b09e;
+            background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%);
+        }
+            }
+            &-btn{
+                background-color: #C51605;
+                padding: .9rem ;
+                text-align: center;
+                border: none;
+                outline: none;
+                border-radius: 4px;
+                transition: all 0.5s;
+                text-transform: capitalize;
+                @keyframes zome {
+                    0%{
+                        transform: scale(1.1);
+                    }
+                    50%{
+                        transform: scale(1.2);
+                    }
+                    100%{
+                        transform: scale(1);
+                    }
+                
+                }
+                &:hover{
+                    background-color: #fff;
+                    animation: zome 1s ease-in infinite;
+                }
+            }
+        }
+        }
+      
+
+  
+
+
+
+ 
+  
+
+
+
+
+ 
