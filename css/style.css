@@ -29,13 +29,12 @@ a {
     grid-template-areas: "header header header" "main main main" "footer footer footer"; } }
 
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/header-image.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media//banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 100%;
   grid-area: header;
-  height: 100vh;
+  min-height: 100vh;
   margin-bottom: 2rem; }
 
 .navbar {
